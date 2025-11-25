@@ -2,21 +2,19 @@
 # https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
 
 [versions]
-agp = "8.9.1"
-centralPublishingMavenPlugin = "0.5.0"
-core = "1.5.0"
-guava = "32.1.2-jre"
+centralPublishingMavenPlugin = "0.9.0"
+coreKtx = "1.17.0"
 junit = "4.13.2"
 kotlin = "2.0.0"
-robolectric = "4.16"
+library = "8.5.2"
+dokka = "2.1.0"
 
 [libraries]
-core = { module = "androidx.test:core", version.ref = "core" }
-guava = { module = "com.google.guava:guava", version.ref = "guava" }
-junit = { module = "junit:junit", version.ref = "junit" }
 central-publishing-maven-plugin = { module = "org.sonatype.central:central-publishing-maven-plugin", version.ref = "centralPublishingMavenPlugin" }
-robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+junit = { module = "junit:junit", version.ref = "junit" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "library" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }

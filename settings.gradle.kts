@@ -32,3 +32,4 @@ plugins {
 }
 
 rootProject.name = "uikit"
+include(":app")
