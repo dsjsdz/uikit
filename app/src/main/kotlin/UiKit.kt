@@ -48,6 +48,7 @@ abstract class UiKit(private val context: Context): Service by createService(con
             val ctx = context.applicationContext
             return when {
                 Build.MODEL.uppercase().startsWith("ZC", ignoreCase = true) -> ZC(ctx)
+                listOf("lg").any { Build.MODEL.startsWith(it, ignoreCase = true) } -> LangGuo(ctx)
                 listOf("rk", "ys", "a527").any { Build.MODEL.startsWith(it, ignoreCase = true) } -> YS(ctx)
                 else -> YS(ctx)
             }
