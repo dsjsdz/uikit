@@ -33,5 +33,29 @@ class LangGuo(private val context: Context) : Service {
         context.sendBroadcast(intent)
     }
 
+    override fun getDeviceModel(): String? {
+        TODO("Not yet implemented")
+    }
+
+    override fun getSerialNumber(): String? {
+        TODO("Not yet implemented")
+    }
+
+    override fun getApiVersion(): String? {
+        TODO("Not yet implemented")
+    }
+
+    override fun getFirmwareVersion(): String? {
+        TODO("Not yet implemented")
+    }
+
+    override fun getMemorySize(): String? {
+        TODO("Not yet implemented")
+    }
+
+    override fun getStorageSize(): String? {
+        TODO("Not yet implemented")
+    }
+
     // 其他未实现的直接 todo
 }
